@@ -6,8 +6,8 @@ from math import *
 import numpy as np
 import serial
 
-def readSerial():
-    ser=serial.Serial('/dev/ttyACM0',9600,timeout=1)
+def readSerial(port=0):
+    ser=serial.Serial(port)
     print ser.name
     ser.close()
 
