@@ -10,6 +10,7 @@ data=[]
 
 def readSerial():
     ser=serial.Serial('/dev/ttyACM0',9600,timeout=1)
+    txt=ser.readline()
     print 'Ignoring data to start at beginning.'
     while txt!='':
         pass
