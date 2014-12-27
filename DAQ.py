@@ -1,10 +1,9 @@
 #!/usr/bin/python2
 
 import matplotlib.pyplot as plt
-import pylab
+import pylab,serial,csv
 from math import *
 import numpy as np
-import serial
 
 data=[]
 
@@ -22,10 +21,10 @@ def readSerial():
     print 'Gathering data.'
     while txt!='':
         txt=ser.readline()
-        data.append(txt.split('\t'))
-        print 'Nothing.' if txt=='' else txt
+        data.append([float(s) for s in txt.replace('\r\n','').split('\t')])
+        #print 'Nothing.' if txt=='' else txt
     print 'Done, closing port.'
     ser.close()
 
 readSerial()
-print data
+csv.writer(open('data.csv','wb'))
