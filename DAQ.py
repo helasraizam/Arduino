@@ -13,13 +13,16 @@ def readSerial():
     txt=ser.readline()
     print 'Ignoring data to start at beginning.'
     while txt!='':
+        txt=ser.readline()
         pass
     print 'Paused data.'
     while txt=='':
+        txt=ser.readline()
         pass
     print 'Gathering data.'
     while txt!='':
-        data.append(ser.readline().split('\t'))
+        txt=ser.readline()
+        data.append(txt.split('\t'))
         print 'Nothing.' if txt=='' else txt
     print 'Done, closing port.'
     ser.close()
