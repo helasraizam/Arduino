@@ -20,8 +20,8 @@ def readSerial():
         pass
     print 'Gathering data.'
     while txt!='':
-        txt=ser.readline()
         data.append([float(s) for s in txt.replace('\r\n','').split('\t')])
+        txt=ser.readline()
         #print 'Nothing.' if txt=='' else txt
     print 'Done, closing port.'
     ser.close()
