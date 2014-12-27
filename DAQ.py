@@ -10,7 +10,7 @@ def readSerial():
     ser=serial.Serial('/dev/ttyACM0',9600,timeout=1)
     while True:
         txt=ser.readline()
-        print txt
+        print 'Nothing.' if txt=='' else txt
     ser.close()
 
 readSerial()
