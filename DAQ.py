@@ -24,5 +24,5 @@ def readSerial():
     print 'Done, closing port.'
     ser.close()
 
-print data
 readSerial()
+print data
