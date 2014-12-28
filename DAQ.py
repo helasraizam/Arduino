@@ -7,24 +7,23 @@ import numpy as np
 
 data=[]
 
-def readSerial():
+with open('data.csv','wb') as f:
+    c=csv.writer(f)
     ser=serial.Serial('/dev/ttyACM0',9600,timeout=1)
     txt=ser.readline()
+    
     print 'Ignoring data to start at beginning.'
     while txt!='':
         txt=ser.readline()
-        pass
+
     print 'Paused data.'
     while txt=='':
         txt=ser.readline()
-        pass
+
     print 'Gathering data.'
     while txt!='':
-        data.append([float(s) for s in txt.replace('\r\n','').split('\t')])
+        c.writerow([float(s) for s in txt.replace('\r\n','').split('\t')])
         txt=ser.readline()
-        #print 'Nothing.' if txt=='' else txt
+        
     print 'Done, closing port.'
     ser.close()
-
-readSerial()
-csv.writer(open('data.csv','wb'))
