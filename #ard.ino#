@@ -18,6 +18,7 @@ void setup()
 
 void loop()
 {
+
   for(int inValue=0;inValue<=255;inValue++)  // loop through all values 0-255
   {
     analogWrite(outPin,inValue);  // set amplifier input to inValue
