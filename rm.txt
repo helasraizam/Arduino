@@ -1,0 +1,16 @@
+/usr/lib/python3.4/site-packages/pkg_resources/__init__.py
+/usr/lib/python3.4/site-packages/pkg_resources/__pycache__/__init__.cpython-34.pyc
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/__init__.py
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/__pycache__/__init__.cpython-34.pyc
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/__about__.py
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/__init__.py
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/__pycache__/__about__.cpython-34.pyc
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/__pycache__/__init__.cpython-34.pyc
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/__pycache__/_compat.cpython-34.pyc
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/__pycache__/_structures.cpython-34.pyc
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/__pycache__/specifiers.cpython-34.pyc
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/__pycache__/version.cpython-34.pyc
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/_compat.py
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/_structures.py
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/specifiers.py
+/usr/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/version.py
