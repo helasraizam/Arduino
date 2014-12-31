@@ -5,7 +5,7 @@ float outVoltage = 0; // True output voltage
 
 void setup()
 {
-  Serial.begin(9600);        // Connect to serial 9600
+  Serial.begin(38400);        // Connect to serial 9600
   pinMode(outPin, OUTPUT);   // Set outPin to write
   pinMode(inPin, INPUT);     // Set inPin to read
 }
@@ -17,7 +17,7 @@ void loop()
     analogWrite(outPin,inValue);  // set amplifier input to inValue
     inVoltage=inValue*5.0/255;    // Convert to true voltage
     Serial.print(inVoltage);      // print true voltage of amplifier IN
-    delay(100);                   // Give it .1 s to stabilize
+    delay(1);                   // Give it .1 s to stabilize
     
     outVoltage = 5.0/1023*analogRead(inPin);   // Get amplifier OUT
     Serial.print('\t');
