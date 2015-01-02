@@ -1,20 +1,22 @@
-int onePin = A0;  // input pin 2
-int twoPin = A1;  // other side of amp : ground pin3 
-int thrPin = A2;  // output pin5
+int Pin2 = A0;  // input pin 2
+int Pin3 = A4;  // other side of amp : ground pin3 
+int Pin6 = A2;  // output pin6
+int grndPin = A3;
 
 float outV1 = 0;
 float outV2 = 0;
 float outV3 = 0;
+float outV4 = 0; //our ground
 
 void setup()
 {
   Serial.begin(9600);
-  pinMode(onePin, INPUT);
-  pinMode(twoPin, INPUT);
-  pinMode(thrPin, INPUT);
+  pinMode(Pin2, INPUT);
+  pinMode(Pin3, INPUT);
+  pinMode(Pin6, INPUT);
   
 }
-// out put is V2, change dat
+
 void loop()
 {
   unsigned long starttime = millis();  
@@ -22,9 +24,10 @@ void loop()
   
   while(endtime-starttime<1000)
   {
-    outV1 = 5.0/1023*analogRead(onePin);
-    outV2 = 5.0/1023*analogRead(twoPin);
-    outV3 = 5.0/1023*analogRead(thrPin); 
+    outV1 = 3.3/680*analogRead(Pin2);
+    outV2 = 3.3/680*analogRead(Pin3);
+    outV3 = 3.3/680*analogRead(Pin6); 
+    outV4 = 3.3/680*analogRead(grndPin);
     
     endtime = millis();
     
@@ -36,10 +39,11 @@ void loop()
     Serial.print('\t');
     Serial.print(outV3);
     Serial.print('\t');
-    Serial.print(Serial.available()); 
+    Serial.print(outV4);
+    //Serial.print(Serial.available()); 
     Serial.println();
-    delay(5);
+    delay(500);
     
   }
-  delay(20000);
+  delay(1);
 } 
